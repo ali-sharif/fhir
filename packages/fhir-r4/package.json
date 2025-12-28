@@ -16,13 +16,6 @@
       "require": "./dist/cjs/src/all.js"
     }
   },
-  "typesVersions": {
-    "*": {
-      "all": [
-        "dist/esm/src/all.d.ts"
-      ]
-    }
-  },
   "private": false,
   "publishConfig": {
     "access": "public"
