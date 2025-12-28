@@ -1,5 +1,5 @@
 {
-  "name": "@solarahealth/fhir-r4",
+  "name": "@ali-sharif/fhir-r4",
   "version": "1.2.0-fork.1",
   "description": "TypeScript types and Zod schemas for HL7 FHIR R4 resources with runtime validation",
   "type": "module",
