@@ -52,12 +52,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SolaraHealthAU/fhir.git",
+    "url": "https://github.com/ali-sharif/fhir.git",
     "directory": "packages/fhir-r4"
-  },
-  "homepage": "https://github.com/SolaraHealthAU/fhir/tree/main/packages/fhir-r4#readme",
-  "bugs": {
-    "url": "https://github.com/SolaraHealthAU/fhir/issues"
   },
   "scripts": {
     "build:cjs": "tsc --project tsconfig.json",
@@ -88,6 +84,5 @@
     "ts-jest": "^29.2.5",
     "typescript": "5.4.5",
     "typescript-eslint": "^7.9.0"
-  },
-  "gitHead": "5831b90d116b7006cbd5e9f9b7436ced60e18370"
+  }
 }
