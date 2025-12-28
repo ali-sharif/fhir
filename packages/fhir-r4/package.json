@@ -2,16 +2,9 @@
   "name": "@ali-sharif/fhir-r4",
   "version": "1.2.0-fork.3",
   "description": "TypeScript types and Zod schemas for HL7 FHIR R4 resources with runtime validation",
-  "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist/esm/src/index.js",
-      "require": "./dist/cjs/src/index.js"
-    },
-    "./all": {
-      "import": "./dist/esm/src/all.js",
-      "require": "./dist/cjs/src/all.js"
-    }
+    ".": "./dist/cjs/src/index.js",
+    "./all": "./dist/cjs/src/all.js"
   },
   "private": false,
   "publishConfig": {
@@ -19,7 +12,6 @@
   },
   "files": [
     "dist/cjs/src",
-    "dist/esm/src",
     "LICENSE",
     "README.md"
   ],
@@ -47,8 +39,7 @@
   },
   "scripts": {
     "build:cjs": "tsc --project tsconfig.json",
-    "build:esm": "tsc --project tsconfig.esm.json",
-    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "build": "npm run clean && npm run build:cjs",
     "clean": "rm -rf dist",
     "ci": "npm run typecheck && npm run test",
     "typecheck": "tsc --noEmit",
