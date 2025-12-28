@@ -1,6 +1,6 @@
 {
   "name": "@ali-sharif/fhir-r4",
-  "version": "1.2.0-fork.3",
+  "version": "1.2.0-fork.4",
   "description": "TypeScript types and Zod schemas for HL7 FHIR R4 resources with runtime validation",
   "exports": {
     ".": "./dist/cjs/src/index.js",
