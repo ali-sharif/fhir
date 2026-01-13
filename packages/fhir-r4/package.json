@@ -1,28 +1,10 @@
 {
-  "name": "@solarahealth/fhir-r4",
-  "version": "1.2.0",
+  "name": "@ali-sharif/fhir-r4",
+  "version": "1.2.0-fork.5",
   "description": "TypeScript types and Zod schemas for HL7 FHIR R4 resources with runtime validation",
-  "main": "dist/cjs/src/index.js",
-  "module": "dist/esm/src/index.js",
-  "types": "dist/esm/src/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/esm/src/index.js",
-      "require": "./dist/cjs/src/index.js",
-      "types": "./dist/esm/src/index.d.ts"
-    },
-    "./all": {
-      "import": "./dist/esm/src/all.js",
-      "require": "./dist/cjs/src/all.js",
-      "types": "./dist/esm/src/all.d.ts"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "all": [
-        "dist/esm/src/all.d.ts"
-      ]
-    }
+    ".": "./dist/cjs/src/index.js",
+    "./all": "./dist/cjs/src/all.js"
   },
   "private": false,
   "publishConfig": {
@@ -30,7 +12,6 @@
   },
   "files": [
     "dist/cjs/src",
-    "dist/esm/src",
     "LICENSE",
     "README.md"
   ],
@@ -53,17 +34,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SolaraHealthAU/fhir.git",
+    "url": "git+https://github.com/ali-sharif/fhir.git",
     "directory": "packages/fhir-r4"
   },
-  "homepage": "https://github.com/SolaraHealthAU/fhir/tree/main/packages/fhir-r4#readme",
-  "bugs": {
-    "url": "https://github.com/SolaraHealthAU/fhir/issues"
-  },
   "scripts": {
-    "build:cjs": "tsc --project tsconfig.json",
-    "build:esm": "tsc --project tsconfig.esm.json",
-    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build": "npm run clean && npm run build:cjs",
     "clean": "rm -rf dist",
     "ci": "npm run typecheck && npm run test",
     "typecheck": "tsc --noEmit",
@@ -72,8 +48,7 @@
     "generate:r4": "esr scripts/generate/R4/generate.ts",
     "generate:fixtures": "esr scripts/generate/R4/generate-tests-and-fixtures.ts",
     "generate": "./bin/download-specifications && npm run generate:r4",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run build"
+    "prepare": "npm run build"
   },
   "dependencies": {
     "zod": "^3.25.0"
@@ -89,6 +64,5 @@
     "ts-jest": "^29.2.5",
     "typescript": "5.4.5",
     "typescript-eslint": "^7.9.0"
-  },
-  "gitHead": "5831b90d116b7006cbd5e9f9b7436ced60e18370"
+  }
 }
